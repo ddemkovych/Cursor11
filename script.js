@@ -1,7 +1,7 @@
 
  const butt = document.getElementById("butt");
  const res =  document.getElementById("result") 
- const time = 50;
+ const  delay = 50;
 
 function getRandomChinese(length) {
     return new Promise((resolve) => {
@@ -10,11 +10,11 @@ function getRandomChinese(length) {
            let arr = [];
            let sign = String(Date.now()).slice(-5);
     while(i < length ) {
-           sign += time;
+           sign +=  delay;
            arr.push(String.fromCharCode(sign));
            i++;
    };
-       resolve(arr.join(""))}, length * time);
+       resolve(arr.join(""))}, length *  delay);
 
     });
 };
@@ -25,5 +25,13 @@ function getRandomChinese(length) {
     });
 
   });
+
+
+
+
+
+
+
+
 
 
